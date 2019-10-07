@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "API Mock Server",
+    "description": "TODO: Add Description",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/search/repos": {
+      "post": {
+        "description": "",
+        "summary": "[LOCAL] Repositories",
+        "tags": [
+          "LOCAL"
+        ],
+        "operationId": "AuthOauthV2TokenPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "client_secret",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {},
+  "tags": [
+    {
+      "name": "LOCAL",
+      "description": ""
+    }
+  ]
+}
