@@ -5,8 +5,8 @@ var cenario = new Cenario()
 exports.CenariosRepository = class{
    
     cenarioGitHub(){
-        cenario.GitHubRepositoriesResponse = githubReposBenedito()
-        cenario.GitHubUserModel = githubUserBenedito()
+        cenario.GitHubRepositoriesResponse = githubReposGoogle()
+        cenario.GitHubUserModel = githubUserGoogle()
         cenario.GitHubPullRequestModel = githubPulls()
         return cenario;
     }   
@@ -29,10 +29,10 @@ function githubPulls(){
     return readJson("./fixtures/github/pulls.json");
 }
 
-function githubUserBenedito(){
-    return readJson("./fixtures/github/user_benedito.json");
+function githubUserGoogle(){
+    return readJson("./fixtures/github/user_google.json");
 }
 
-function githubReposBenedito(){
-    return readJson("./fixtures/github/repos_benedito.json");
+function githubReposGoogle(){
+    return readJson("./fixtures/github/repos_google.json");
 }
